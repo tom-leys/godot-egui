@@ -12,5 +12,5 @@ readme = "../README.md"
 workspace = ".."
 
 [dependencies]
-gdnative = "0.9.3"
+gdnative = { path = "../../godot-rust/gdnative" }
 egui = "0.13"
