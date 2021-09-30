@@ -175,15 +175,6 @@ dependencies = [
 [[package]]
 name = "gdnative"
 version = "0.9.3"
-dependencies = [
- "gdnative-bindings 0.9.3",
- "gdnative-core 0.9.3",
- "gdnative-derive 0.9.3",
-]
-
-[[package]]
-name = "gdnative"
-version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7ff5b6474bfe306c35ecb0cae47291e9af8af2f72e98d65cba7b76b2a52bf82b"
 dependencies = [
@@ -193,15 +184,13 @@ dependencies = [
 ]
 
 [[package]]
-name = "gdnative-bindings"
+name = "gdnative"
 version = "0.9.3"
+source = "git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df#b2c948be22df45a051b57173b0d1396a91411dfd"
 dependencies = [
- "bitflags",
- "gdnative-core 0.9.3",
- "gdnative-sys 0.9.3",
- "gdnative_bindings_generator 0.9.3",
- "heck",
- "libc",
+ "gdnative-bindings 0.9.3 (git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df)",
+ "gdnative-core 0.9.3 (git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df)",
+ "gdnative-derive 0.9.3 (git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df)",
 ]
 
 [[package]]
@@ -219,20 +208,16 @@ dependencies = [
 ]
 
 [[package]]
-name = "gdnative-core"
+name = "gdnative-bindings"
 version = "0.9.3"
+source = "git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df#b2c948be22df45a051b57173b0d1396a91411dfd"
 dependencies = [
- "ahash",
- "approx 0.5.0",
- "atomic-take",
  "bitflags",
- "gdnative-impl-proc-macros 0.9.3",
- "gdnative-sys 0.9.3",
- "glam",
- "indexmap",
+ "gdnative-core 0.9.3 (git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df)",
+ "gdnative-sys 0.9.3 (git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df)",
+ "gdnative_bindings_generator 0.9.3 (git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df)",
+ "heck",
  "libc",
- "once_cell",
- "parking_lot",
 ]
 
 [[package]]
@@ -253,12 +238,21 @@ dependencies = [
 ]
 
 [[package]]
-name = "gdnative-derive"
+name = "gdnative-core"
 version = "0.9.3"
+source = "git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df#b2c948be22df45a051b57173b0d1396a91411dfd"
 dependencies = [
- "proc-macro2",
- "quote",
- "syn",
+ "ahash",
+ "approx 0.5.0",
+ "atomic-take",
+ "bitflags",
+ "gdnative-impl-proc-macros 0.9.3 (git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df)",
+ "gdnative-sys 0.9.3 (git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df)",
+ "glam",
+ "indexmap",
+ "libc",
+ "once_cell",
+ "parking_lot",
 ]
 
 [[package]]
@@ -273,8 +267,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "gdnative-impl-proc-macros"
+name = "gdnative-derive"
 version = "0.9.3"
+source = "git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df#b2c948be22df45a051b57173b0d1396a91411dfd"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -293,14 +288,13 @@ dependencies = [
 ]
 
 [[package]]
-name = "gdnative-sys"
+name = "gdnative-impl-proc-macros"
 version = "0.9.3"
+source = "git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df#b2c948be22df45a051b57173b0d1396a91411dfd"
 dependencies = [
- "bindgen 0.58.1",
- "libc",
- "miniserde",
  "proc-macro2",
  "quote",
+ "syn",
 ]
 
 [[package]]
@@ -317,8 +311,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "gdnative-sys"
+version = "0.9.3"
+source = "git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df#b2c948be22df45a051b57173b0d1396a91411dfd"
+dependencies = [
+ "bindgen 0.58.1",
+ "libc",
+ "miniserde",
+ "proc-macro2",
+ "quote",
+]
+
+[[package]]
 name = "gdnative_bindings_generator"
 version = "0.9.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0ef6014ab49e58445894633f8a01b321ed86337150b6f1024ffea923e4499b91"
 dependencies = [
  "heck",
  "miniserde",
@@ -332,8 +340,7 @@ dependencies = [
 [[package]]
 name = "gdnative_bindings_generator"
 version = "0.9.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0ef6014ab49e58445894633f8a01b321ed86337150b6f1024ffea923e4499b91"
+source = "git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df#b2c948be22df45a051b57173b0d1396a91411dfd"
 dependencies = [
  "heck",
  "miniserde",
@@ -369,10 +376,10 @@ checksum = "9b919933a397b79c37e33b77bb2aa3dc8eb6e165ad809e58ff75bc7db2e34574"
 
 [[package]]
 name = "godot_egui"
-version = "0.1.1"
+version = "0.1.4"
 dependencies = [
  "egui",
- "gdnative 0.9.3",
+ "gdnative 0.9.3 (git+https://github.com/tom-leys/godot-rust.git?rev=b2c948be22df)",
 ]
 
 [[package]]

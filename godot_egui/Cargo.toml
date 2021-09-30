@@ -12,5 +12,5 @@ readme = "../README.md"
 workspace = ".."
 
 [dependencies]
-gdnative = { path = "../../godot-rust/gdnative" }
+gdnative = {git="https://github.com/tom-leys/godot-rust.git", rev="b2c948be22df"}
 egui = "0.13"
