@@ -13,4 +13,4 @@ workspace = ".."
 
 [dependencies]
 gdnative = { git="https://github.com/tom-leys/godot-rust.git", branch="trs" }
-egui = { git="git@github.com:setzer22/egui.git", branch="setzer22/my-fork" }
+egui = { git="https://github.com/setzer22/egui.git", branch="setzer22/my-fork" }
